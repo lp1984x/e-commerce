@@ -17,7 +17,6 @@ export default function Topbar() {
           className="topbar__buttons"
           href="#none"
           onClick={() => setopen((prev) => !prev)}
-          onBlur={() => setopen((prev) => !prev)}
         >
           {current}
           <Icon.ChevronCompactDown className="topbar__button-icon" />
@@ -27,7 +26,10 @@ export default function Topbar() {
             <li
               key={index}
               className="topbar__submenu-buttons"
-              onClick={() => dispatch(setCurrency(item))}
+              onClick={() => {
+                dispatch(setCurrency(item));
+                setopen((prev) => !prev);
+              }}
             >
               {item}
             </li>
