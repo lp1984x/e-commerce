@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body,
+#root {
+  height: 100%;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
