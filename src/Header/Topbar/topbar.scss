@@ -1,0 +1,54 @@
+@import "/src/palette";
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 0 15px;
+  background-color: $darkest;
+  color: $lightest;
+}
+.topbar__left-bar {
+  position: relative;
+}
+.topbar__right-bar {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.topbar__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 12px;
+  color: $lightest;
+}
+.topbar__button-icon {
+  margin-left: 5px;
+}
+
+.topbar__buttons:hover {
+  color: $middle-light;
+}
+
+.topbar__submenu,
+.topbar__submenu-open {
+  list-style: none;
+  padding: 0px 12px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: $darkest;
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  transition: 0.2s;
+}
+
+.topbar__submenu {
+  transform: scaleY(0);
+}
+
+.topbar__submenu-buttons {
+  padding: 5px 0;
+  border-top: 1px solid $lightest;
+}
