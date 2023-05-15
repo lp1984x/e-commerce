@@ -15,11 +15,11 @@ export default function SearchBar() {
       <div className="searchBar__cartSection">
         <a href="#none" className="searchBar__link">
           <Icon.Heart className="searchBar__icons" />
-          Wishlist
+          <p className="d-none d-lg-inline m-0 ms-lg-2">Wishlist</p>
         </a>
         <a href="#none" className="searchBar__link">
           <Icon.Bag className="searchBar__icons" />
-          Items
+          <p className="d-none d-lg-inline m-0 ms-lg-2">Items</p>
         </a>
       </div>
     </div>

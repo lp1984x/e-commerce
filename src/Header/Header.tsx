@@ -1,12 +1,13 @@
 import React from "react";
 import Topbar from "./Topbar/Topbar";
-import SearchBar from "./SearchBar/SearchBar";
+
+import NavBar from "./NavBar/NavBar";
 
 export default function Header() {
   return (
     <header className="header">
       <Topbar />
-      <SearchBar />
+      <NavBar />
     </header>
   );
 }
