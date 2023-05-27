@@ -1,0 +1,10 @@
+@import "/src/palette";
+
+.bottom-section {
+  background-color: $darkest;
+  color: $lightest;
+}
+.bottom-section__patent {
+  max-width: 670px;
+  text-align: center;
+}

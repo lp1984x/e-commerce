@@ -1,0 +1,32 @@
+@import "/src/palette";
+
+.sign-section {
+  width: 100%;
+  min-height: 264px;
+  background-color: $middle-light;
+}
+.sign-section__email,
+.sign-section__tel,
+.sign-section__button {
+  height: 47px;
+}
+.sign-section__email,
+.sign-section__tel {
+  width: 220px;
+  padding: 0 12px;
+  margin-right: 19px;
+}
+
+.sign-section__button {
+  width: 130px;
+  font-weight: 17px;
+  font-weight: bold;
+}
+.sign-section-left,
+.sign-section-right {
+  padding: 40px 40px 48px 0;
+}
+.sign-section-right {
+  padding-left: 40px;
+  padding-right: 0;
+}

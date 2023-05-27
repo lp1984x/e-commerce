@@ -1,0 +1,30 @@
+.prodcard {
+  width: 295px;
+  height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.prodcard__image {
+  width: 100%;
+  height: 230px;
+  margin-bottom: 14px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.prodcard__brand {
+  font-size: 14px;
+  color: gray;
+}
+.prodcard__span {
+  font-size: 18px;
+  font-weight: 400;
+}
+.prodcard__button {
+  background-color: white;
+  font-weight: 700;
+  width: 100%;
+  height: 45px;
+  margin-top: 14px;
+}

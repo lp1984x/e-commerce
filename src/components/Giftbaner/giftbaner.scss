@@ -1,0 +1,31 @@
+.giftbaner {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  background-color: black;
+  margin-bottom: 30px;
+  color: white;
+}
+.giftbaner__left,
+.giftbaner__right {
+  width: 50%;
+}
+.giftbaner__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+.giftbaner__right {
+  background-image: url("../../../public/images/Gift-Card.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.giftbaner__button {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-weight: 800;
+  background-color: white;
+}

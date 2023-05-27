@@ -1,0 +1,36 @@
+@import "/src/palette";
+
+.topbar,
+.topbar__container {
+  display: flex;
+}
+
+.topbar {
+  justify-content: center;
+  background-color: $darkest;
+  color: $lightest;
+  &__container {
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  &__left-bar {
+    position: relative;
+  }
+  &__right-bar {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px 12px;
+    color: $lightest;
+  }
+  &__buttons:hover {
+    color: $middle-light;
+  }
+}

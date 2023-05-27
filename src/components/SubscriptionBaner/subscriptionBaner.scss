@@ -1,0 +1,35 @@
+.subscription-baner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  color: white;
+  padding: 50px 0;
+  &__left,
+  &__right {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 40% 40px 10%;
+    height: 290px;
+  }
+  &__right {
+    background-image: url("../../../public/images/bant.png");
+  }
+  &__left {
+    background-image: url("../../../public/images/club.png");
+  }
+
+  &__button {
+    width: 180px;
+
+    bottom: 30px;
+    padding: 15px;
+    background-color: white;
+    font-weight: 700;
+  }
+}
