@@ -8,7 +8,7 @@ interface ISquare {
 
 export default function Square({ title, image }: ISquare) {
   return (
-    <div className="square">
+    <div className="square col-12 col-md-6 col-xl-4">
       <div
         style={{
           backgroundImage: `url(${image})`,

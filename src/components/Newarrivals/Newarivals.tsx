@@ -18,13 +18,24 @@ export default function Newarivals() {
     <div className="py-5">
       <h1 className="newarrivals__title">NEW ARRIVALS!</h1>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1}
         spaceBetween={10}
         loop={true}
         pagination={{
           clickable: true,
         }}
         navigation={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
         modules={[Navigation]}
       >
         {data.map((item) => (

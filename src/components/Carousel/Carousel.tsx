@@ -8,7 +8,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function Carousel() {
   return (
-    <div className="pt-3 pb-5">
+    <div className="carousel pt-3 pb-5">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}

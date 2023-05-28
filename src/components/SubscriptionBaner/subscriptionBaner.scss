@@ -1,7 +1,8 @@
 .subscription-baner {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 10px;
   grid-column-gap: 10px;
   color: white;
   padding: 50px 0;
@@ -26,10 +27,14 @@
 
   &__button {
     width: 180px;
-
     bottom: 30px;
     padding: 15px;
     background-color: white;
     font-weight: 700;
+  }
+}
+@media (min-width: 768px) {
+  .subscription-baner {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
