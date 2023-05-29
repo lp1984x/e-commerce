@@ -1,26 +1,28 @@
 .giftbaner {
   width: 100%;
-  height: 250px;
   display: flex;
+  flex-direction: column-reverse;
   background-color: black;
   margin-bottom: 30px;
   color: white;
 }
 .giftbaner__left,
 .giftbaner__right {
-  width: 50%;
+  width: 100%;
 }
 .giftbaner__left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50px;
+  align-items: center;
+  height: 150px;
 }
 .giftbaner__right {
   background-image: url("../../../public/images/Gift-Card.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  height: 250px;
 }
 .giftbaner__button {
   width: 200px;
@@ -28,4 +30,22 @@
   margin-top: 20px;
   font-weight: 800;
   background-color: white;
+}
+@media (min-width: 480px) {
+  .giftbaner {
+    flex-direction: row;
+    padding: 0 30px;
+
+    &__left,
+    &__right {
+      width: 50%;
+    }
+    &__left {
+      align-items: start;
+      height: 250px;
+    }
+    &__right {
+      background-position: right;
+    }
+  }
 }
