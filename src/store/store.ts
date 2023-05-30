@@ -3,10 +3,10 @@ import { TypedUseSelectorHook } from 'react-redux';
 import { useSelector, useDispatch} from 'react-redux';
 import { CurrencySlice } from './features/currencySlice';
 import { DataSlice } from './features/dataSlice';
-import { CartSlice } from './features/cartSlice';
+import { BagSlice } from './features/bagSlice';
 import { SingleSlice } from './features/singleSlice';
 import { PageSlice } from './features/pageSlice';
-import { MdlSlice } from './features/mdlSlice';
+
 
 
 
@@ -14,10 +14,9 @@ export const store = configureStore({
   reducer: {
     currency:CurrencySlice.reducer,
     data:DataSlice.reducer,
-    cart:CartSlice.reducer,
+    bag:BagSlice.reducer,
     single:SingleSlice.reducer,
     page:PageSlice.reducer,
-    mdl:MdlSlice.reducer
     
     
   },

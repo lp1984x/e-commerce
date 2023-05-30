@@ -4,29 +4,43 @@
   width: 100%;
   min-height: 264px;
   background-color: $middle-light;
-}
-.sign-section__email,
-.sign-section__tel,
-.sign-section__button {
-  height: 47px;
-}
-.sign-section__email,
-.sign-section__tel {
-  width: 220px;
-  padding: 0 12px;
-  margin-right: 19px;
+  &__email,
+  &__tel,
+  &__button {
+    height: 47px;
+    margin-bottom: 10px;
+  }
+  &__email,
+  &__tel {
+    width: 100%;
+    padding: 0 12px;
+    margin-right: 12px;
+  }
+
+  &__button {
+    width: 130px;
+    font-weight: 17px;
+    font-weight: bold;
+  }
+  &-left,
+  &-right {
+    padding: 40px 40px 40px 10px;
+  }
+  &-right {
+    padding-left: 40px;
+    padding-right: 0;
+  }
 }
 
-.sign-section__button {
-  width: 130px;
-  font-weight: 17px;
-  font-weight: bold;
+@media (min-width: 665px) and (max-width: 768px) {
+  .sign-section__email,
+  .sign-section__tel {
+    width: 220px;
+  }
 }
-.sign-section-left,
-.sign-section-right {
-  padding: 40px 40px 48px 0;
-}
-.sign-section-right {
-  padding-left: 40px;
-  padding-right: 0;
+@media (min-width: 1200px) {
+  .sign-section__email,
+  .sign-section__tel {
+    width: 220px;
+  }
 }

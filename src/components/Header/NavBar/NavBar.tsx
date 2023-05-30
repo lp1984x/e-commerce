@@ -3,8 +3,10 @@ import { Nav, NavDropdown, Navbar, Offcanvas } from "react-bootstrap";
 import "./navbar.scss";
 import * as Icon from "react-bootstrap-icons";
 import { useFetchCategorie } from "../../../dummyJson/dummyJson";
+import { useAppSelector } from "../../../store/store";
 
 export default function NavBar() {
+  const totalQuantity = useAppSelector((state) => state.bag.totalQuantity);
   const { categories } = useFetchCategorie();
   const womens = (() => {
     const reg = /^womens/;
@@ -20,7 +22,6 @@ export default function NavBar() {
       (item, index) => 4 < index && 17 > index && !reg.test(item)
     );
   })();
-  console.log(others);
 
   return (
     <Navbar expand="lg" className="nav-bar">
@@ -43,7 +44,9 @@ export default function NavBar() {
             </a>
             <a href="#none" className="nav-bar__link">
               <Icon.Bag className="nav-bar__icons" />
-              <p className="d-none d-lg-inline m-0 ms-lg-2">Items</p>
+              <p className="d-none d-lg-inline m-0 ms-lg-2">
+                {totalQuantity > 0 && totalQuantity} Items
+              </p>
             </a>
           </div>
         </div>

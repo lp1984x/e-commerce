@@ -10,6 +10,6 @@ export interface IProd {
     thumbnail:string,
     title:string
     price:number,
-    cartQuantity?:number
+    bagQuantity?:number
     tempPrice?:number
  }

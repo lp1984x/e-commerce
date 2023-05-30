@@ -40,13 +40,7 @@ export default function Newarivals() {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <Prodcard
-              category={item.category}
-              brand={item.brand}
-              image={item.images[0]}
-              title={item.title}
-              price={item.price}
-            />
+            <Prodcard product={item} />
           </SwiperSlide>
         ))}
       </Swiper>

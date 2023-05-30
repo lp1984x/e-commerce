@@ -1,39 +1,37 @@
 import React from "react";
 import "./prodcard.scss";
-import { useAppSelector } from "../../store/store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
+import { addToBag } from "../../store/features/bagSlice";
+import { IProd } from "../../models";
 
 interface ICard {
-  image: string;
-  title: string;
-  price: number;
-  brand: string;
-  category: string;
+  product: IProd;
 }
 
-export default function Prodcard({
-  image,
-  title,
-  price,
-  brand,
-  category,
-}: ICard) {
+export default function Prodcard({ product }: ICard) {
   const currency = useAppSelector((state) => state.currency.value);
+  const dispatch = useAppDispatch();
   return (
     <div className="prodcard">
       <div
         className="prodcard__image"
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${product.images[0]})` }}
       ></div>
-      <h4>{title}</h4>
-      <p className="prodcard__brand">by: {brand}</p>
-      <p className="prodcard__category">{category}</p>
+      <h4>{product.title}</h4>
+      <p className="prodcard__brand">by: {product.brand}</p>
+      <p className="prodcard__category">{product.category}</p>
       <h3>
         <span className="prodcard__span">price:</span>{" "}
-        {currency === "USD" && "$ " + price}
-        {currency === "RUB" && `\u20bd ` + price * 80}
-        {currency === "CHN" && `\u5143 ` + price * 7}
+        {currency === "USD" && "$ " + product.price}
+        {currency === "RUB" && `\u20bd ` + product.price * 80}
+        {currency === "CHN" && `\u5143 ` + product.price * 7}
       </h3>
-      <button className="prodcard__button">ADD TO BAG</button>
+      <button
+        className="prodcard__button"
+        onClick={() => dispatch(addToBag(product))}
+      >
+        ADD TO BAG
+      </button>
     </div>
   );
 }
