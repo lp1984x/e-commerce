@@ -4,6 +4,7 @@ import "./navbar.scss";
 import * as Icon from "react-bootstrap-icons";
 import { useFetchCategorie } from "../../../dummyJson/dummyJson";
 import { useAppSelector } from "../../../store/store";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const totalQuantity = useAppSelector((state) => state.bag.totalQuantity);
@@ -42,12 +43,12 @@ export default function NavBar() {
               <Icon.Heart className="nav-bar__icons" />
               <p className="d-none d-lg-inline m-0 ms-lg-2">Wishlist</p>
             </a>
-            <a href="#none" className="nav-bar__link">
+            <Link to="bag" className="nav-bar__link">
               <Icon.Bag className="nav-bar__icons" />
               <p className="d-none d-lg-inline m-0 ms-lg-2">
                 {totalQuantity > 0 && totalQuantity} Items
               </p>
-            </a>
+            </Link>
           </div>
         </div>
 

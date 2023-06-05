@@ -1,0 +1,20 @@
+.bagitem {
+  vertical-align: middle;
+  text-align: center;
+
+  &__prod,
+  &__quantity {
+    display: flex;
+    align-items: center;
+  }
+  &__close-button {
+    vertical-align: middle;
+  }
+  &__image {
+    width: 25%;
+    padding: 0 20px;
+  }
+  &__title {
+    font-weight: 700;
+  }
+}

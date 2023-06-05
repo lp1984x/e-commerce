@@ -1,0 +1,73 @@
+.payment-body {
+  width: 100%;
+  padding: 10px;
+  background-color: lightgrey;
+
+  &__table {
+    border-bottom: solid 1px gray;
+    font-weight: 700;
+  }
+  &__table tr > td:last-child {
+    text-align: end;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
+  }
+  &__addresses,
+  &__or {
+    text-align: center;
+  }
+
+  &__addresses,
+  &__checkout,
+  &__or,
+  &__paypal,
+  &__credit,
+  &__amazon {
+    width: 100%;
+  }
+
+  &__checkout,
+  &__paypal,
+  &__credit,
+  &__amazon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__paypal,
+  &__credit {
+    width: 49%;
+  }
+  &__checkout {
+    background-color: rgb(197, 64, 64);
+  }
+  &__paypal {
+    color: rgb(66, 66, 241);
+    font-weight: 900;
+    background-color: rgb(251, 198, 66);
+  }
+  &__paypal > span {
+    color: rgb(52, 180, 163);
+  }
+  &__credit {
+    background-color: rgb(67, 67, 198);
+  }
+  &__amazon {
+    font-weight: 800;
+    border: 2px solid black;
+  }
+  &__checkout,
+  &__credit {
+    font-weight: 900;
+    color: white;
+  }
+  &__icons {
+    margin-right: 5px;
+  }
+}
